@@ -1,3 +1,15 @@
+
+Open two terminals, one for Node.js and the other for Angular 2.0
+
+Node.js Command -- `node server.js`
+Angular 2.0 command -- `ng serve --open`
+
+The above commands would help you to run the application in `http://localhost:4200/`
+
+This application was built using `MEAN Stack` technologies and `JSON Web Tokens` Authentication, performing Login/Logout operations with Authentication and CRUD operations.
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Development server
