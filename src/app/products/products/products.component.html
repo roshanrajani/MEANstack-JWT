@@ -1,0 +1,49 @@
+<div class="panel panel-success">
+  <div class="panel-heading">{{pageTitle}}</div>
+    <div class="panel-body">
+      <div>
+        <input type="text" placeholder="Filter Products" [(ngModel)]="filterby" class="form-control" >
+      </div><br/>
+
+      <div class="alert alert-info" *ngIf="filterby && filterby.length">
+        Products filtered by : {{filterby}}
+      </div>
+
+      <table class="table table-bordered table-hover table-striped" *ngIf="products && products.length">
+        <thead>
+          <tr>
+            <th>
+              <button class="btn btn-primary" (click)="toggleImage()">{{showHideImg ? 'Hide Image' : 'Show Image'}}</button>
+            </th>
+            <th>Product Name</th>
+            <th>Product Code</th>
+            <th>Release Date</th>
+            <th>Price</th>
+            <th>Rating</th>
+      
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products | products">
+            <td>
+              <img *ngIf ='showHideImg' [src]="product.imageUrl" style="width:50px" [title] ="product.description"/>
+            </td>
+            <td>
+            <a [routerLink] ="['/details', product.productCode]">
+            {{product.productName | uppercase}}
+             </a>
+            </td>
+            <td>{{product.productCode | lowercase}}</td>
+            <td>{{product.releaseDate}}</td>
+            <td>{{product.price | currency:'INR':false}}</td>
+            <td>{{product.starRating}}
+              <app-rating [ratingVal]="product.starRating" (ratingEvent)="ratingEventFn($event)"></app-rating>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+
+

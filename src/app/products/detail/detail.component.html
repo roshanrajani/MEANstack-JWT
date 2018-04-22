@@ -1,0 +1,54 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    Product detail page
+  </div>
+  <div class="panel-body">
+     <h1>Product info to be loaded here!</h1>
+
+     <table class="table-bordered table-condensed">
+       <thead>
+         <tr>
+           <th colspan="10">
+             Product
+           </th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>Product ID</td>
+           <td>{{temp.productId}}</td>
+           
+         </tr>
+         <tr>
+            <td>Product Name</td>
+            <td>{{temp.productName}}</td>
+          </tr>
+          <tr>
+              <td>Product Code</td>
+              <td>{{temp.productCode}}</td>
+          </tr>
+          <tr>
+                <td>Release Date</td>
+                <td>{{temp.releaseDate}}</td>
+          </tr>
+          <tr>
+              <td>Description</td>
+              <td>{{temp.description}}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{temp.price}}</td>
+      </tr>
+      <tr>
+          <td>Rating</td>
+          <td>{{temp.starRating}}</td>
+    </tr>
+    
+       </tbody>
+     </table><br/>
+     
+
+    
+     <button class="btn btn-success" (click)="gotoproducts();"> Goto Products</button>
+  </div>
+</div>
